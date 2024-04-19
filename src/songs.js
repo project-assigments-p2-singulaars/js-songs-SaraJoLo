@@ -1,43 +1,56 @@
 //Exercise 1: Get the array of all Artists.
-function getAllArtists(array){
-    let result = '???';
-    //console.log("Exercise 1 ->", result);
+function getAllArtists(song){
+    let result = getAllArtists.map(song => song.artist);
+    console.log(result);
     return result;
+    
 };
 
-//Exercise 2: Get the songs of a certain artist
+//Exercise 2: función getSongsFromArtist() -> retorna todo el objeto que contiene las canciones de un artista determinado.
 function getSongsFromArtist(array, artist){
-    //Write your code here
+    return songs.filter(song => song.artist === artistName);
+    const songsByJamiroquai = getSongsFromArtist(songs, 'Jamiroquai');
+    console.log(songsByJamiroquai);
 };
 
-//Exercise 3: Alphabetic order by title
-function orderAlphabetically(){
-    //Write your code here
+//Exercise 3:ordena el array por título alfabéticamente.
+function orderAlphabetically(title){
+    orderAlphabetically.sort();
+    console.log(orderAlphabetically)
 };
 
-//Exercise 4: Order by year, ascending
-function orderByYear(){
-    //Write your code here
+//Exercise 4:ordena el array por año en orden ascendente.
+function orderByYear(year){
+    orderAlphabetically.sort((a,b) => a-b,
+    console.log(orderAlphabetically));
+}
+
+//Exercise 5:filtra las canciones por género determinado.
+function songsByGenre(genre) {
+    const songsByGenero = songsByGenre.filter(genre);
+    console.log(songsByGenero)
 };
 
-//Exercise 5: Filter songs by genre
-function songsByGenre() {
-    //Write your code here
-};
+//Exercise 6: -> modifica la duración de las canciones a segundos.
+    function minutsToSeconds(songs) {
+        return songs.map(song => {
+            const [min, sec] = song.duration.split('min ');
+            const durationInSeconds = parseInt(min) * 60 + parseInt(sec.replace('sec', ''));
+            return { ...song, duration: durationInSeconds };
+        });
+    }
 
-//Exercise 6: Modify the duration of songs to seconds
-function minutsToSeconds() {
-    //Write your code here
-};
-
-//Exercise 7: Get the longest song
+//Exercise 7: función getLongestSong() -> obtiene la canción con mayor duración en segundos.
 function getLongestSong(){
-    //Write your code here
+    const getLongestSong = getLongestSong.filter(...duration)
+    console.log(getLongestSong)
 };
 
-//Exercise 8: Get the shortest song
-//Write the getShortestSong() function
-
+//Exercise 8:  función getShortestSong() -> obtiene la canción con menor duración en segundos. Escribe el test y la función.
+function getShortestSong(){
+    const getShortestSong = getShortestSong.filter(...duration)
+    console.log(getShortestSong)
+};
 
 
 
